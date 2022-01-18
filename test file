@@ -1,0 +1,28 @@
+import codeforces_api
+import csv
+
+parser = codeforces_api.CodeforcesParser()
+cf_api = codeforces_api.CodeforcesApi('2e89464a5fb953bf014b7c72036cc90366d97905','e9652017350294cdeda8690b20bf56d6d8fe3360')
+f = open('./data.csv','w')
+writer = csv.writer(f)
+fileds ={'User Id', 'User Name', 'Tag'}
+writer.writerow(fileds)
+test = cf_api.problemset_recent_status(10, problemset_name= "")
+s=[]
+for i in test:
+    ta = i.problem.tags
+    check = i.author.members
+    # writer.writerow(check)
+    # writer.writerow(ta)
+    # print(i.id,':')
+    s.append(i.id)
+    s.append(ta)
+    for j in check:
+        # print(j.handle)
+        s.append(j.handle)
+        #  writer.writerow(j.handle)
+    # print(ta)
+    
+    # writer.writerow(ta)
+    writer.writerow(s)
+    
