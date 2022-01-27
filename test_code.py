@@ -45,7 +45,7 @@ df = df.transpose()
 compression_opts = dict(method='zip',
                         archive_name='ProbRecco.csv')
 # conversion to csv==============================================
-df.to_csv('IEProject.zip', index=False,
+df.to_csv('IEProject.zip', mode='a', index=False,
           compression=compression_opts)
 
 # program end====================================================
