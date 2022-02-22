@@ -228,8 +228,8 @@ def main():
 
     df = df.transpose()
 
-    df.to_csv('csv_files/prob_rec_csv_file_yo.csv',
-              mode='a', index=False, header=False)
+    df.to_csv('csv_files/prob_rec_csv_file_yo_3.csv',
+              mode='a', index=False)
 
 
 # compression_opts = dict(method='zip',
@@ -239,7 +239,7 @@ def main():
 
 
 if __name__ == "__main__":
-    for i in range(1, 10):
+    for i in range(10):
         main()
         time.sleep(10*60)
         print(i, "th sleep this is")
