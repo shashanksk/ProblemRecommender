@@ -239,7 +239,7 @@ def main():
 
 
 if __name__ == "__main__":
-    for i in range(10):
+    for i in range(20):
         main()
         time.sleep(10*60)
         print(i, "th sleep this is")
